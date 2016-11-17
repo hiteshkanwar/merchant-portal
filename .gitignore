@@ -14,11 +14,12 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
+/config/database.yml/*
 !/log/.keep
 !/tmp/.keep
 
 # Ignore Byebug command history file.
 .byebug_history
 /node_modules
-/app/assets/javascripts/react_bundle.js
+
 /app/assets/stylesheets/react_bundle.css
