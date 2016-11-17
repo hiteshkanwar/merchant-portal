@@ -9,7 +9,16 @@ body{
 	top: 0;
 	color: #fff !important;
 	background-color: transparent !important;
-
+}
+.delete-category p , .delete-item p{
+	color: red;
+	font-weight: normal;
+	margin-bottom: 15px;
+}
+.delete-category h3 , .delete-item h3{
+	font-size: 24px;
+	font-weight: normal;
+	padding: 20px 0px;
 }
 .sidebar button > div > div{
 	height: 60px !important;
@@ -67,7 +76,7 @@ body{
 	background-color: #3D3D38;
 }
 .main-content{
-	width: calc(100% - 257px); 
+	width: calc(100% - 237px); 
 	float: right;
 	background-color: #fff;
 	margin-top: 53px;
@@ -109,6 +118,12 @@ body{
 .bodytag {
 	padding: 0px 15px;
 }
+.modal-icons li >div > div{
+	display: inherit !important;
+}
+.modal-icons .add-svgicon >div > div{
+	display: inline-block !important;
+}
 .header h1{
 	padding: 0;
 	font-size: 28px;
@@ -118,6 +133,9 @@ body{
 	margin: 0 0 15px;
 	font-weight: 300;
 	font-family: "Open Sans",sans-serif;
+}
+.header .sub-title{
+	font-size: 28px;
 }
 .header{
 	padding: 20px 0px;
@@ -567,13 +585,13 @@ body{
 	height: auto  !important;
 	width: 18px;
 	padding-top: 3px;
-	padding-left: 4px;
+	padding-left: 0px;
 }
 .delete-icon-item{
 	height: auto  !important;
 	width: 18px;
 	padding-top: 3px;
-	padding-left: 4px;
+	padding-left: 0px;
 }
 .sidebar  > div > div {
 	width: 235px !important;

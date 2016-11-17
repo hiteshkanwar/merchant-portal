@@ -20,6 +20,7 @@ import ContentAdd from 'material-ui/svg-icons/content/add';
 import Dialog from 'material-ui/Dialog';
 import Divider from 'material-ui/Divider';
 import Checkbox from 'material-ui/Checkbox';
+import ReactTooltip from 'react-tooltip';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
@@ -54,52 +55,59 @@ class DrawerExample extends React.Component {
   render() {
     return (
       <div >
-       <div className="top-header">
+        <ReactTooltip />
+        <div className="top-header">
           <div className="logo">
             <img src="../assets/logo-default.png"/>
           </div>
           <div className="notify-icons">
-          <ul>
-          <li>
-            <IconMenu
-            iconButtonElement={
-              <IconButton touch={true}>
-                <img src="../assets/bell.svg"/>
-              </IconButton>
-            }
-          >
-          <div className="menu-icon top-margin">
-            <MenuItem primaryText="You have no new notification" />
+            <ul>
+              <li>
+                <IconMenu
+                iconButtonElement={
+                  <IconButton touch={true}>
+                    <img src="../assets/bell.svg"/>
+                  </IconButton>
+                }
+              >
+              <div className="menu-icon top-margin">
+                <MenuItem primaryText="You have no new notification" />
+              </div>
+              </IconMenu>
+              </li>
+              <li>
+                 <IconMenu
+                iconButtonElement={
+                  <IconButton touch={true}
+                      style={{
+                      width:'auto',
+                      padding:'0px',
+                      height:'auto',
+                    }}
+                  >
+                    <img src="../assets/account-circle.svg"/>
+                    <img src="../assets/arrow.svg"/>
+                  </IconButton>
+                }
+              >
+              <div className="menu-icon top-margin">
+                <MenuItem primaryText="My profile" className="profile" />
+                <MenuItem primaryText="logout" className="logout"/>
+              </div>
+              </IconMenu>
+              </li>
+            </ul>
           </div>
-          </IconMenu>
-          </li>
-          <li>
-             <IconMenu
-            iconButtonElement={
-              <IconButton touch={true}>
-                <img src="../assets/account-circle.svg"/>
-              </IconButton>
-            }
-          >
-          <div className="menu-icon top-margin">
-            <MenuItem primaryText="My profile" className="profile" />
-            <MenuItem primaryText="logout" className="logout"/>
-          </div>
-          </IconMenu>
-          
-          </li>
-          </ul>
-          </div>
-       </div>
+        </div>
         <div className="sidebar ">
           <StaticDrawer/>
           <RaisedButton label="nil" onClick={this.handleToggle}/>
           <Drawer open={this.state.open}>
             <MenuItem className="search-drawer">
-            <select>
-              <option>Tap 42</option>
-              <option>Choose..</option> 
-            </select>
+              <select>
+                <option>Tap 42</option>
+                <option>Choose..</option> 
+              </select>
             </MenuItem>
             <MenuItem className="menu"><img src="../assets/home.svg"/>Home</MenuItem>
             
@@ -120,7 +128,7 @@ class DrawerExample extends React.Component {
         <div className = {'main-content ' + this.state.newClass}>         
           <div className = 'bodytag'>
             <div className="header">
-              <h1>Tap 42 <span> One of Fort Lauderdale  best places to eat and hang out with friends!!
+              <h1><span className="sub-title">Tap 42</span> <span> One of Fort Lauderdale  best places to eat and hang out with friends!!
               </span> </h1>
                 <nav>
                   <ul>
@@ -163,10 +171,10 @@ class DrawerExample extends React.Component {
                     <ul>
                       <li>
                         <svg  viewBox="0 0 24 24">
-                          <path  d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z" />
+                          <path  d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z" data-tip="Refresh" />
                         </svg>
                       </li>
-                      <li>
+                      <li className="add-svgicon">
                         <AddItemForm/> 
                       </li>
                       <li>                        
@@ -177,7 +185,7 @@ class DrawerExample extends React.Component {
                       </li>
                       <li>
                         <svg  viewBox="0 0 24 24">
-                          <path  d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                          <path  d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" data-tip="Search for an item" />
                         </svg>
                       </li>
                     </ul>
@@ -217,52 +225,51 @@ class DrawerExample extends React.Component {
                           <MenuItem primaryText="Cafe Caliente" rightIcon={<b >
                             <svg  viewBox="0 0 24 24">
                               <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                          </svg>
+                            </svg>
                           </b>} />
                           <MenuItem primaryText="Section" rightIcon={<b style={style.rightIcon}><svg  viewBox="0 0 24 24">
-                              <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                          </svg></b>} />
-                           <MenuItem primaryText="Cafe Caliente" rightIcon={<b style={style.rightIcon}>
+                            <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
+                            </svg></b>} />
+                          <MenuItem primaryText="Cafe Caliente" rightIcon={<b style={style.rightIcon}>
                             <svg  viewBox="0 0 24 24">
                               <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                          </svg>
+                            </svg>
                           </b>} />
                           <MenuItem primaryText="Section" rightIcon={<b style={style.rightIcon}><svg  viewBox="0 0 24 24">
                               <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                          </svg></b>} />
-                           <MenuItem primaryText="Cafe Caliente" rightIcon={<b style={style.rightIcon}>
+                            </svg></b>} />
+                          <MenuItem primaryText="Cafe Caliente" rightIcon={<b style={style.rightIcon}>
                             <svg  viewBox="0 0 24 24">
                               <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                          </svg>
+                            </svg>
                           </b>} />
                           <MenuItem primaryText="Section" rightIcon={<b style={style.rightIcon}><svg  viewBox="0 0 24 24">
                               <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                          </svg></b>} />
-                           <MenuItem primaryText="Cafe Caliente" rightIcon={<b style={style.rightIcon}>
+                            </svg></b>} />
+                          <MenuItem primaryText="Cafe Caliente" rightIcon={<b style={style.rightIcon}>
                             <svg  viewBox="0 0 24 24">
                               <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                          </svg>
+                            </svg>
                           </b>} />
                           <MenuItem primaryText="Section" rightIcon={<b style={style.rightIcon}><svg  viewBox="0 0 24 24">
                               <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                          </svg></b>} />
-                         
-                         <MenuItem primaryText="Cafe Caliente" rightIcon={<b style={style.rightIcon}>
+                            </svg></b>} />
+                          <MenuItem primaryText="Cafe Caliente" rightIcon={<b style={style.rightIcon}>
                             <svg  viewBox="0 0 24 24">
                               <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                          </svg>
+                            </svg>
                           </b>} />
                           <MenuItem primaryText="Section" rightIcon={<b style={style.rightIcon}><svg  viewBox="0 0 24 24">
                               <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                          </svg></b>} />
+                            </svg></b>} />
                           <MenuItem primaryText="Paragraph" rightIcon={<b style={style.rightIcon}>
                             <svg  viewBox="0 0 24 24">
                               <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                          </svg>
+                            </svg>
                           </b>} />
                           <MenuItem primaryText="Section" rightIcon={<b style={style.rightIcon}><svg  viewBox="0 0 24 24">
                               <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                          </svg></b>} />
+                            </svg></b>} />
                         </Menu>
                       </Paper>
                     </div>
@@ -277,7 +284,7 @@ class DrawerExample extends React.Component {
                 <ul>
                   <li>
                     <svg viewBox="0 0 24 24">
-                      <path  d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z" />
+                      <path  d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z" data-tip="Refresh" />
                     </svg>
                   </li>
                   <li>
@@ -285,58 +292,56 @@ class DrawerExample extends React.Component {
                   </li>
                 </ul>
                 <div className="addon-box">
-                <div className="search-field">
-                  <input type="text" placeholder="search..."/>
-                </div>
-                <div>
-                  <h5>
-                    Groups assigned to item...
-                  </h5>
-                  <p>
-                    No groups for item
-                  </p>
-                </div>
-                 <div>
-                  <h5>
-                    All groups
-                  </h5>
-                  <p>
-                    Vodka Mixers Add-On Vodka Mixers Add-On
-                    <svg  viewBox="0 0 24 24">
-                        <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                    </svg>
-                  </p>
-                  <p>
-                    Vodka Mixers Add-On Vodka Mixers Add-On
-                    <svg  viewBox="0 0 24 24">
-                        <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                    </svg>
-                  </p>
-                  <p>
-                    Vodka Mixers Add-On Vodka Mixers Add-On
-                    <svg  viewBox="0 0 24 24">
-                        <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                    </svg>
-                  </p>
-                  <p>
-                    Vodka Mixers Add-On Vodka Mixers Add-On
-                    <svg  viewBox="0 0 24 24">
-                        <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                    </svg>
-                  </p>
-                  <p>
-                    Vodka Mixers Add-On Vodka Mixers Add-On
-                    <svg  viewBox="0 0 24 24">
-                        <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                    </svg>
-                  </p>
-                  <p>
-                    Vodka Mixers Add-On Vodka Mixers Add-On
-                    <svg  viewBox="0 0 24 24">
-                        <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
-                    </svg>
-                  </p>
-                </div>
+                  <div className="search-field">
+                    <input type="text" placeholder="search..."/>
+                  </div>
+                  <div>
+                    <h5>
+                      Groups assigned to item...
+                    </h5>
+                    <p>
+                      No groups for item
+                    </p>
+                  </div>
+                  <div>
+                    <h5>All groups</h5>
+                    <p>
+                      Vodka Mixers Add-On Vodka Mixers Add-On
+                      <svg  viewBox="0 0 24 24">
+                          <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
+                      </svg>
+                    </p>
+                    <p>
+                      Vodka Mixers Add-On Vodka Mixers Add-On
+                      <svg  viewBox="0 0 24 24">
+                          <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
+                      </svg>
+                    </p>
+                    <p>
+                      Vodka Mixers Add-On Vodka Mixers Add-On
+                      <svg  viewBox="0 0 24 24">
+                          <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
+                      </svg>
+                    </p>
+                    <p>
+                      Vodka Mixers Add-On Vodka Mixers Add-On
+                      <svg  viewBox="0 0 24 24">
+                          <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
+                      </svg>
+                    </p>
+                    <p>
+                      Vodka Mixers Add-On Vodka Mixers Add-On
+                      <svg  viewBox="0 0 24 24">
+                          <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
+                      </svg>
+                    </p>
+                    <p>
+                      Vodka Mixers Add-On Vodka Mixers Add-On
+                      <svg  viewBox="0 0 24 24">
+                          <path  d="M3,15H21V13H3V15M3,19H21V17H3V19M3,11H21V9H3V11M3,5V7H21V5H3Z" />
+                      </svg>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -436,58 +441,54 @@ class AddItemForm extends React.Component {
   return (
       <div >
         <FloatingActionButton mini={true} disabled={false} style={style} onClick={this.handleOpen} >
-          <ContentAdd />
+          <ContentAdd data-tip="Add a menu item"/>
         </FloatingActionButton>
-
         <Dialog
           title="Add Item"
           actions={actions}
           modal={true}
           open={this.state.open}
-          contentStyle={customContentStyle}
-        > 
-        <form className="add-form-category">
-        <div className="form-group">
-        <label>Name</label>
-        <input type="text" placeholder="Name" className="input-name"/>
-        </div>
-        
-        <div className="form-group">
-        <label>Description</label>
-        <input type="text" placeholder="Description" className="description-field"/>
-        </div>
-         <Divider />
-        <div className="form-group">
-        <label>Price</label>
-        <input type="text" placeholder="Price" className="price-field"/>
-        </div>
-         <div className="form-group">
-          <label>Happy hours</label>
-          <input type="text" placeholder="Happy hours Price" className="happy-hours"/>
-          </div>
-           <div className="form-group">
-          <label>Tax</label>
-          <select className="tax-field">
-          <option>Choose...</option>
-          <option>Price before tax</option>
-          <option>Price includes tax</option>
-          <option>Price exempt</option>
-          </select>
-          </div>
-           <Divider />
-           <div className="form-group">
-          <label>List</label>
-          <input type="file" placeholder="Name" className="cover-field"/>
-          </div>
-           <div className="form-group">
-          <label>Cover</label>
-          <input type="file" placeholder="Name" className="cover-field"/>
-          </div>
-          <Divider />
-        </form>
-       
+          contentStyle={customContentStyle}> 
+          <form className="add-form-category">
+            <div className="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Name" className="input-name"/>
+            </div>
+            
+            <div className="form-group">
+              <label>Description</label>
+              <input type="text" placeholder="Description" className="description-field"/>
+            </div>
+            <Divider />
+            <div className="form-group">
+              <label>Price</label>
+              <input type="text" placeholder="Price" className="price-field"/>
+            </div>
+            <div className="form-group">
+              <label>Happy hours</label>
+              <input type="text" placeholder="Happy hours Price" className="happy-hours"/>
+            </div>
+            <div className="form-group">
+              <label>Tax</label>
+              <select className="tax-field">
+              <option>Choose...</option>
+              <option>Price before tax</option>
+              <option>Price includes tax</option>
+              <option>Price exempt</option>
+              </select>
+            </div>
+            <Divider />
+            <div className="form-group">
+              <label>List</label>
+              <input type="file" placeholder="Name" className="cover-field"/>
+            </div>
+            <div className="form-group">
+              <label>Cover</label>
+              <input type="file" placeholder="Name" className="cover-field"/>
+            </div>
+            <Divider />
+          </form>
         </Dialog>
-
       </div>
     );
   }  
@@ -560,57 +561,52 @@ class EditItemForm extends React.Component {
             marginRight:'3px',
           }}
          onClick={this.handleOpen} >
-          <img src="../assets/pencil.svg" className="edit-icon"/>
-        </FloatingActionButton>
-         
-          
+          <img src="../assets/pencil.svg" className="edit-icon" data-tip="Edit selected item"/>
+        </FloatingActionButton> 
         <Dialog
           title="Edit Item"
           actions={actions}
           modal={true}
           open={this.state.open}
-          contentStyle={customContentStyle}
-        > 
-        <form className="add-form-category">
-        <div className="form-group">
-          <label>Name</label>
-          <input type="text" placeholder="Name" className="input-name"/>
-        </div>
-        
-        <div className="form-group">
-          <label>Description</label>
-          <input type="text" placeholder="Description" className="description-field"/>
-        </div>
-         <Divider />
-        <div className="form-group">
-          <label>Price</label>
-          <input type="text" placeholder="Price" className="price-field"/>
-        </div>
-         <div className="form-group">
-          <label>Happy hours</label>
-          <input type="text" placeholder="Happy hours Price" className="happy-hours"/>
-          </div>
-           <div className="form-group">
-          <label>Tax</label>
-          <select className="tax-field">
-          <option>Choose...</option>
-          <option>Price before tax</option>
-          <option>Price includes tax</option>
-          <option>Price exempt</option>
-          </select>
-          </div>
-           <Divider />
-           <div className="form-group">
-          <label>List</label>
-          <input type="file" placeholder="Name" className="cover-field"/>
-          </div>
-           <div className="form-group">
-          <label>Cover</label>
-          <input type="file" placeholder="Name" className="cover-field"/>
-          </div>
-          <Divider />
-        </form>
-       
+          contentStyle={customContentStyle}> 
+          <form className="add-form-category">
+            <div className="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Name" className="input-name"/>
+            </div>
+            <div className="form-group">
+              <label>Description</label>
+              <input type="text" placeholder="Description" className="description-field"/>
+            </div>
+            <Divider />
+            <div className="form-group">
+              <label>Price</label>
+              <input type="text" placeholder="Price" className="price-field"/>
+            </div>
+            <div className="form-group">
+              <label>Happy hours</label>
+              <input type="text" placeholder="Happy hours Price" className="happy-hours"/>
+            </div>
+            <div className="form-group">
+              <label>Tax</label>
+              <select className="tax-field">
+              <option>Choose...</option>
+              <option>Price before tax</option>
+              <option>Price includes tax</option>
+              <option>Price exempt</option>
+              </select>
+            </div>
+            <Divider />
+            <div className="form-group">
+              <label>List</label>
+              <input type="file" placeholder="Name" className="cover-field"/>
+            </div>
+            <div className="form-group">
+              <label>Cover</label>
+              <input type="file" placeholder="Name" className="cover-field"/>
+            </div>
+            <Divider />
+          </form>
         </Dialog>
 
       </div>
@@ -662,7 +658,7 @@ class AddCategoryForm extends React.Component {
   return (
       <div>
         <FloatingActionButton mini={true} onClick={this.handleOpen} >
-          <ContentAdd />
+          <ContentAdd data-tip="Add a category"/>
         </FloatingActionButton>
 
         <Dialog
@@ -670,8 +666,7 @@ class AddCategoryForm extends React.Component {
           actions={actions}
           modal={true}
           open={this.state.open}
-          contentStyle={customContentStyle}
-        > 
+          contentStyle={customContentStyle}> 
           <form className="add-form-category">
             <div className="form-group">
               <label>Name</label>
@@ -742,7 +737,7 @@ class EditCategoryForm extends React.Component {
             marginRight:'3px',
           }}
          onClick={this.handleOpen} >
-          <img src="../assets/pencil.svg" className="edit-icon"/>
+          <img src="../assets/pencil.svg" className="edit-icon" data-tip="Edit selected category"/>
         </FloatingActionButton>
          
         <Dialog
@@ -750,9 +745,8 @@ class EditCategoryForm extends React.Component {
           actions={actions}
           modal={true}
           open={this.state.open}
-          contentStyle={customContentStyle}
-        > 
-        <form className="add-form-category">
+          contentStyle={customContentStyle}> 
+          <form className="add-form-category">
             <div className="form-group">
               <label>Name</label>
               <input type="text" placeholder="Name" className="input-name"/>
@@ -817,8 +811,8 @@ class AddonForm extends React.Component {
     ];
   return (
       <div>
-        <FloatingActionButton mini={true} onClick={this.handleOpen} >
-          <ContentAdd />
+        <FloatingActionButton mini={true} onClick={this.handleOpen} data-tip="Add an addon group">
+          <ContentAdd  />
         </FloatingActionButton>
 
         <Dialog
@@ -987,17 +981,18 @@ class DeleteItem extends React.Component {
   return (
       <div>
         <FloatingActionButton mini={true} onClick={this.handleOpen} >
-          <img src="../assets/delete.svg" className="delete-icon-item"/>
+          <img src="../assets/delete.svg" className="delete-icon-item" data-tip="Delete selected item"/>
         </FloatingActionButton>
-
         <Dialog
           title="Confirm Delete"
           actions={actions}
           modal={true}
           open={this.state.open}
-          contentStyle={customContentStyle}
-        > 
-        <form className="delete-ietm">
+          contentStyle={customContentStyle}> 
+        <Divider style={{
+            margin:'0px !important',
+         }} />
+        <form className="delete-item">
             <div className="form-group">
              <h3>Are you sure you wish to delete this item?</h3>
             </div>
@@ -1061,9 +1056,8 @@ class Delete extends React.Component {
   return (
       <div>
         <FloatingActionButton mini={true} onClick={this.handleOpen} >
-          <img src="../assets/delete.svg" className="delete-icon"/>
+          <img src="../assets/delete.svg" data-tip="Delete selected category" className="delete-icon"/>
         </FloatingActionButton>
-
         <Dialog
           title="Confirm Delete"
           actions={actions}
@@ -1071,9 +1065,13 @@ class Delete extends React.Component {
           open={this.state.open}
           contentStyle={customContentStyle}
         > 
+         <Divider style={{
+            margin:'0px !important',
+         }} />
         <form className="delete-category">
+           
             <div className="form-group">
-             <h3>Are you sure you wish to delete this category?</h3>
+             <h3>Are you sure you wish to delete this <br></br> category?</h3>
             </div>
             <div className="form-group">
               
