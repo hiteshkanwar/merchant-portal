@@ -5,30 +5,6 @@ import ContentAdd from 'material-ui/svg-icons/content/add';
 import Dialog from 'material-ui/Dialog';
 import Divider from 'material-ui/Divider';
 
-const style = {
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-  },
-  
-  headline: {
-    fontSize: 24,
-    paddingTop: 16,
-    marginBottom: 12,
-    fontWeight: 400,
-  },
-  marginRight: 20,
-  paper: {
-    display: 'inline-block',
-    float: 'left',
-    margin: '16px 32px 16px 0',
-  },
-  rightIcon: {
-    textAlign: 'center',
-    lineHeight: '24px',
-  },
-};
 
 const customContentStyle = {
   width: '46%',
@@ -57,14 +33,13 @@ class AddCategoryForm extends React.Component {
       <FlatButton
          style={{
           border: '1px solid #ccc',
-          Color: '#333',
+          color: '#333',
           overflow:'visible',
           fontSize:'14px',
           marginRight:'7px',
         }}
         label="Close"
-        onTouchTap={this.handleClose}
-      />,
+        onClick={this.handleClose}/>,
       <FlatButton
           style={{
           border: '1px solid #35aa47',
@@ -75,13 +50,12 @@ class AddCategoryForm extends React.Component {
           marginRight:'7px',
         }}
         label="Save"
-        onTouchTap={this.handleClose}
-      />,
+        onClick={this.handleClose}/>,
     ];
   return (
       <div>
-        <FloatingActionButton mini={true} onTouchTap={this.handleOpen} >
-          <ContentAdd />
+        <FloatingActionButton mini={true} onClick={this.handleOpen} >
+          <ContentAdd data-tip="Add a category"/>
         </FloatingActionButton>
 
         <Dialog
@@ -89,8 +63,7 @@ class AddCategoryForm extends React.Component {
           actions={actions}
           modal={true}
           open={this.state.open}
-          contentStyle={customContentStyle}
-        > 
+          contentStyle={customContentStyle}> 
           <form className="add-form-category">
             <div className="form-group">
               <label>Name</label>

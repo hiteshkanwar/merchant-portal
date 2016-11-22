@@ -133,6 +133,7 @@ body{
 	margin: 0 0 15px;
 	font-weight: 300;
 	font-family: "Open Sans",sans-serif;
+	text-align: left;
 }
 .header .sub-title{
 	font-size: 28px;
@@ -595,4 +596,7 @@ body{
 }
 .sidebar  > div > div {
 	width: 235px !important;
+}
+.login{
+	background-color: #444;
 }

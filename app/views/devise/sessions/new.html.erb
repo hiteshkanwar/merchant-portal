@@ -1,0 +1,39 @@
+<div class="body">
+<div class="form-logo">
+  <a href="#">
+      <img src="/assets/logo-default.png" alt="">
+  </a>
+</div>
+<div class="login-form">
+<h2 class="top-hd">Login to your account</h2>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-group ">
+      <%= f.email_field :email, class: "form-control", placeholder: "Enter Address"%>
+      <span><img src="/assets/envelop.png"></span>
+ </div>
+  <div class="form-group">
+    <%= f.password_field :password, class: "form-control", placeholder: "Enter password"%>
+    <span><img src="/assets/lock.png"></span>
+  </div>
+  <% if devise_mapping.rememberable? -%>
+   <!--  <div class="form-group">
+      <%#= f.check_box :remember_me  %>
+      <%#= f.label :remember_me ,class: "form-control" %>
+    </div> -->
+  <% end -%>
+  <div class="btn-group">
+      <%= f.submit "Log in", class: "sub-btn"%>
+  </div> 
+  <hr>
+<% end %>
+<div class="form-btm">
+  <h3>Forgot Your Password?</h3>
+  <p>no worries, click <a href="/users/password/new">here</a> to reset your password.</p>
+  <p>Don't have an account yet?  <a href="/users/sign_up">Create an account</a></p>
+</div>
+<%#= render "devise/shared/links" %>
+
+<div class="form-footer">
+  2014/15 © SpeedETab.
+</div>
+</div>

@@ -1,0 +1,158 @@
+.body {
+  background: #444;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.btn-group {
+  float: right;
+  width: 100%;
+  padding-bottom: 20px;
+}
+h1 {
+  color: #ccc;
+  text-align: center;
+  font-family: 'Vibur', cursive;
+  font-size: 50px;
+}
+.login-form {
+  width: 315px;
+  padding: 40px 30px;
+  background: #eee;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 16%;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+.form-control {
+  width: 85%;
+  height: 25px;
+  border: none;
+  padding: 5px 7px 5px 40px;
+  background: #fff !important;
+  color: #666;
+  border-left: 2px solid green;
+}
+.form-control:focus {
+  border-color: #fff !important;
+  color: #10CE88;
+}
+.log-btn {
+  background: #2D8F3C;
+  display: inline-block;
+  width: 100px;
+  font-size: 16px;
+  height: 35px;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  float: right;
+}
+
+.link {
+  text-decoration: none;
+  color: #C6C6C6;
+  float: right;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+.link:hover {
+  text-decoration: underline;
+  color: #8C918F;
+}
+
+.alert {
+  display: none;
+  font-size: 12px;
+  color: #f00;
+  float: left;
+}
+.form-btm h3 {
+  font-size: 17px;
+  color: #555;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+.top-hd {
+  font-size: 23px;
+  color: #000;
+  font-weight: 300;
+    margin-bottom: 25px;
+}
+.form-btm a {
+  color: #5b9bd1;
+}
+.login-form span {
+  position: absolute;
+  left: 10px;
+  top: 6px;
+}
+.form-logo {
+  margin: 60px auto 0;
+  padding: 15px;
+  text-align: center;
+}
+.form-footer {
+  margin-top: 53px;
+  position: absolute;
+  text-align: center;
+  color: #999;
+  margin-left: 68px;
+}
+.form-footer.forgot-pass {
+  margin-top: 130px;
+}
+.sub-btn {
+  background: #2D8F3C;
+  display: inline-block;
+  width: 107px;
+  font-size: 16px;
+  height: 35px;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  float: right;
+  background-image: url('/assets/rightarrow.png');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 26px;
+}
+.back-btn {
+ background: #dddddd;
+  display: inline-block;
+  width: 35px;
+  font-size: 16px;
+  text-align: center;
+  height: 27px;
+  color: #333;
+  text-decoration: none;
+  border: none;
+  float: left;
+  background-image: url('/assets/leftarrow.png');
+  background-repeat: no-repeat;
+  background-position: left 20px center;
+  padding-left: 42px;
+  padding-top: 9px;
+  padding-right: 33px;
+
+}
+.check-span {
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: -4px;
+  margin-left: 16px;
+  font-family: "Open Sans",sans-serif;
+  padding-bottom: 50px;
+}
+.form-footer.signup-footer {
+  margin-top: 110px;
+}
+.check-span a {
+ color: #5b9bd1;
+ text-decoration: none;
+}
