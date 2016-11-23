@@ -16,18 +16,20 @@
         <%# if @minimum_password_length %>
         <!-- <em>(<%#= @minimum_password_length %> characters minimum)</em> -->
         <%# end %>
-        <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Enter Address" %>
+        <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Enter password" %>
         <span><img src="/assets/lock.png"></span>
       </div>
        <div class="form-group">
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Enter Address" %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Enter Password" %>
          <span><img src="/assets/check.png"></span>
       </div>
       <div class="form-group">
          <%= f.check_box :remember_me  %>
-         <span class="check-span">I agree to the <a href="" data-bind="click: terms">Terms of Service</a> and <a href="" data-bind="click: privacy">Privacy Policy</a></span>
+         <span class="check-span">I agree to the 
+         <a href="" data-bind="click: terms">Terms of Service</a> 
+         and <a href="" data-bind="click: privacy">Privacy Policy</a>
+         </span>
       </div><br/>
-
        <div class="btn-group">
         <%= link_to 'Back',user_session_path, class: "back-btn"%>
         <%= f.submit "Submit", class: "sub-btn"%>
