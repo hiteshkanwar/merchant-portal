@@ -47,11 +47,11 @@ body{
 	width: 235px !important;
 	overflow-y: auto;
 	height: 100%;
-	margin-top: 50px;
+	/*margin-top: 50px;*/
 }
 .sidebar > div > div , .sidebar > div > div > div{
-	top:46px !important;
-	background-color: #3D3D38 !important;
+	/*top:46px !important;*/
+	background-color: #2b333b !important;
 	overflow: visible !important;
 	
 }
@@ -60,8 +60,12 @@ body{
 }
 .sidebar .menu{
 	background-color: #303030;
-	color: #d9d9d9 !important;
+	color: #85898c !important;
 	font-size: 15px !important;
+}
+.sidebar .menu:hover{
+	background-color:#3d454d !important;
+	color: #fff !important;
 }
 .sidebar .menu img{
 	vertical-align: middle;
@@ -76,10 +80,12 @@ body{
 	background-color: #3D3D38;
 }
 .main-content{
-	width: calc(100% - 237px); 
+	width: calc(100% - 260px);
 	float: right;
 	background-color: #fff;
-	margin-top: 53px;
+	position: relative;
+	margin: 0 14px;
+	/*margin-top: 53px;*/
 }
 .content-leftwrapper{
 	width: 78%;
@@ -345,7 +351,7 @@ body{
 	margin-bottom: 10px;
 }
 .new-main-content{
-	width:calc(100% - 60px);
+	width:calc(100% - 88px);
 }
 .search-field {
 	text-align: center;
@@ -600,3 +606,98 @@ body{
 .login{
 	background-color: #444;
 }
+.headline{
+	width: 20%;
+	float: left;
+	padding-top: 30px;
+	font-size: 29px;
+	font-family: sans-serif;
+	color:#32373c;
+}
+.item-tabs{
+	width: 80%;
+	float: right;
+	padding-top: 20px;
+}
+.item-tabs > div > div  {
+	position:absolute !important;
+	left: 0px;
+	width: 100%;
+	background-color: transparent !important;
+	z-index: -1;
+}
+.item-tabs .active{
+	color: #2996cc !important;
+	border-bottom:4px solid #2996cc !important;
+}
+.item-tabs > div{
+   background-color: #fff !important;
+}
+.inner-tabs {
+	border-top: 1px solid #ccc !important;
+}
+.category{
+	width: 37%;
+	float: left;
+	margin: 20px 0px;
+}
+
+.searh-rightfield{
+	width: 63%;
+	float: right;
+	text-align: right;
+	margin: 20px 0px;
+}
+.searh-rightfield .search-field{
+	width: 49%;
+	float: left;
+}
+.clear{
+	clear:both;
+}
+.import-btn > button{
+	background-color: #2996cc !important;
+	box-shadow: none;
+	text-transform: inherit;
+	color: #fff;
+}
+.import-btn > button  span{
+	text-transform: inherit !important;
+	color: #fff !important;
+	font-weight: bold !important;
+	font-size: 15px !important; 
+	padding: 0px 12px !important;
+}
+.import-btn{
+	box-shadow: none !important;
+	margin-right: 15px;
+}
+.searh-rightfield .search-field input{
+	width: 77%;
+	background-position: left 10px center;
+	margin: 0px;
+	padding-left: 35px;
+
+}
+.inner-tabs table th{
+	color: #32373c !important;
+	font-weight: bold!important;
+	font-size: 15px !important;
+}
+.inner-tabs table td{
+	color:#32373c !important;
+	font-weight: normal !important;
+	font-size: 15px !important;
+}
+.inner-tabs table thead{
+	background-color: #f0f1f2;
+}
+.inner-tabs .text-right{
+	text-align: right !important;
+}
+.first-menu{
+	margin-top: 46px !important;
+}
+
+
+
