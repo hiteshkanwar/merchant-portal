@@ -13,5 +13,6 @@
  * require_tree .
  *= require form-style
  *= require style
+ *= require dashboard
  * require_self
  */
