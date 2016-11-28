@@ -639,7 +639,7 @@ body{
 .category{
 	width: 37%;
 	float: left;
-	margin: 20px 0px;
+	margin: 5px 0px;
 }
 
 .searh-rightfield{
@@ -671,9 +671,10 @@ body{
 .import-btn{
 	box-shadow: none !important;
 	margin-right: 15px;
+	float: left;
 }
 .searh-rightfield .search-field input{
-	width: 77%;
+	width: 68%;
 	background-position: left 10px center;
 	margin: 0px;
 	padding-left: 35px;
@@ -698,6 +699,10 @@ body{
 .first-menu{
 	margin-top: 46px !important;
 }
-
-
-
+.inner-tabs table th:first-child{
+	display: none;
+}
+.link-tag{
+	text-decoration: none;
+    color: #85898c !important;
+}

@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   # get 'dashboard/index'
 
   devise_for :users
+  # root to: 'dashboard#index'
   root to: 'dashboard#index'
+  resources :items, only: [:index]
   
 	# root to: 'react_examples#component'
 	# root to: 'settings#index'

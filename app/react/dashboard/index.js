@@ -27,7 +27,7 @@ import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColu
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
-class HomePage extends React.Component {
+class Dashboard extends React.Component {
 
   getChildContext() {
       return { muiTheme: getMuiTheme(lightBaseTheme) };
@@ -67,7 +67,7 @@ class HomePage extends React.Component {
             <MenuItem  className="menu first-menu" primaryText="Sign out" href="/users/sign_out" data-method="delete"/>
             <MenuItem className="menu">Home</MenuItem>
             <MenuItem className="menu">Sales</MenuItem>
-            <MenuItem className="menu">Item</MenuItem>
+            <MenuItem className="menu"><a href="/items" className="link-tag">Items</a></MenuItem>
             <MenuItem className="menu">Employees</MenuItem>
             <MenuItem className="menu">Customers</MenuItem>
           </Drawer>
@@ -232,7 +232,7 @@ class HomePage extends React.Component {
   }
 }
 
-HomePage.childContextTypes = {
+Dashboard.childContextTypes = {
   muiTheme: React.PropTypes.object.isRequired,
 };
 
@@ -333,4 +333,4 @@ function handleActive(tab) {
 }
 
 
-export default HomePage;
+export default Dashboard;
