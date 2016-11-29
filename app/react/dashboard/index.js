@@ -65,9 +65,9 @@ class Dashboard extends React.Component {
           <RaisedButton label="nil" onClick={this.handleToggle}/>
           <Drawer open={this.state.open}>
             <MenuItem  className="menu first-menu" primaryText="Sign out" href="/users/sign_out" data-method="delete"/>
-            <MenuItem className="menu">Home</MenuItem>
+            <MenuItem className="menu first-menu"><a href="/dashboard" className="link-tag">Home</a></MenuItem>            
             <MenuItem className="menu">Sales</MenuItem>
-            <MenuItem className="menu"><a href="/items" className="link-tag">Items</a></MenuItem>
+            <MenuItem className="menu"><a href="/dashboard/items/library" className="link-tag">Items</a></MenuItem>
             <MenuItem className="menu">Employees</MenuItem>
             <MenuItem className="menu">Customers</MenuItem>
           </Drawer>

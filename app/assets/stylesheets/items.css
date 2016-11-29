@@ -1,0 +1,63 @@
+.item-tabs > div > div{
+	 z-index: 1 !important;
+}
+
+.import-btn-new{
+	float: right !important`;
+}
+.add-form-category {
+    background-color: #fafafa;
+    border-left: 1px solid #f0f1f2;
+    bottom: 0;
+    /*box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.1);*/
+    font-size: 14px;
+    font-weight: normal;
+    padding: 36px;
+    text-align: left;
+}
+.add-form-category .input-name {
+    background-image: none;
+    background-position: unset;
+    background-repeat: no-repeat;
+    padding: 9px 12px !important;
+    width: 95%;
+}
+.add-form-category .input-name:focus{
+	border-color:#2996cc;
+}
+.add-form-category legend {
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    padding-bottom: 11px;
+    text-transform: uppercase;
+    color: #32373c;
+    font-weight: bold;
+}
+.note{
+    margin: 2px 0 20px 40px;
+    padding: 0;
+}
+.check-main div{
+	margin-bottom: 0 !important;
+}
+.multiple-input input{
+	width: 45%;
+	border: none;
+}
+.multiple-input input:focus{
+	border: none;
+}
+.multiple-input {
+    border: 1px solid #e5e5e5;
+}
+.multiple-input .form-group {
+	margin-bottom: 0;
+}
+
+.buttons-bottom {
+    bottom: 15px;
+    position: absolute;
+    right: 36px;
+    text-align: right;
+}

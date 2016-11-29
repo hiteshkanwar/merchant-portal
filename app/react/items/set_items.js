@@ -85,10 +85,21 @@ class SetItems extends React.Component {
               style={styles.checkbox}
             />
             <Checkbox
+              label="Chocolate Cake"
+              labelPosition="left"
+              style={styles.checkbox}
+            />
+            <Checkbox
               label="Coffee"
               labelPosition="left"
               style={styles.checkbox}
             />
+            <Checkbox
+              label="Cupcake"
+              labelPosition="left"
+              style={styles.checkbox}
+            />
+
           </div>
         </Dialog>
       </div>

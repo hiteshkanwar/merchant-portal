@@ -14,5 +14,6 @@
  *= require form-style
  *= require style
  *= require dashboard
+ *= require items
  * require_self
  */

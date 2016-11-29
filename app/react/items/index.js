@@ -86,7 +86,7 @@ class ItemDetail extends React.Component {
           <Drawer open={this.state.open}>
             <MenuItem className="menu first-menu" primaryText="Sign out"  href="/users/sign_out" 
             data-method="delete"/>
-            <MenuItem className="menu first-menu"><a href="/" className="link-tag">Home</a></MenuItem>
+            <MenuItem className="menu first-menu"><a href="/dashboard" className="link-tag">Home</a></MenuItem>
             <MenuItem className="menu">Sales</MenuItem>
             <MenuItem className="menu"><a href="/items" className="link-tag">Items</a></MenuItem>
             <MenuItem className="menu">Customers</MenuItem>
@@ -125,7 +125,7 @@ class ItemDetail extends React.Component {
                   <div className="clear"></div>
                   <Table>
                     <TableHeader adjustForCheckbox={this.state.showCheckboxes}>
-                      <TableRow displayRowCheckbox={this.state.showCheckboxes}>
+                      <TableRow>
                         <TableHeaderColumn>Name</TableHeaderColumn>
                         <TableHeaderColumn>Category</TableHeaderColumn>
                         <TableHeaderColumn className="text-right">Price</TableHeaderColumn>
@@ -161,6 +161,30 @@ class ItemDetail extends React.Component {
                 textTransform:"inherit",
                 fontSize: "16px",
               }}>
+              <div className="inner-tabs" style={{ backgroundColor: '#fff', color:"#64696e",
+                fontWeight:"bold", textTransform:"inherit", fontSize: "16px", border:"none",}}>
+                <div>
+                  <div className="searh-rightfield">
+                    <CreateModifier/>
+                  </div>
+                  <div className="clear"></div>
+                  <Table>
+                    <TableHeader adjustForCheckbox={this.state.showCheckboxes}>
+                      <TableRow>
+                        <TableHeaderColumn>Set Name</TableHeaderColumn>
+                        <TableHeaderColumn>Options</TableHeaderColumn>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody  displayRowCheckbox={this.state.showCheckboxes}>
+                      <TableRow>
+                        <TableRowColumn>Coffee Modifiers</TableRowColumn>
+                        <TableRowColumn>sugar,Cream, no sugar,No Cream</TableRowColumn>
+                        <TableRowColumn><SetItems/></TableRowColumn>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </div>
+              </div>
             </Tab>
 
             <Tab label="Categories" 

@@ -20,10 +20,6 @@ module.exports = {
         key: 'style',
         test: /\.s?css$/,
         loader: ExtractTextPlugin.extract('css!sass')
-      },
-      {
-        key: 'images',
-        test: /\.(jpg|svg|png)?$/,
       }
     ]
   },
