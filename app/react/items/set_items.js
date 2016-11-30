@@ -81,7 +81,7 @@ class SetItems extends React.Component {
           </div>
           <div className="check-box-list">
             <div className="check-new">
-            <span className="grey-box">ALL</span>
+            <p>ALL</p>
             <div className="main-check">
             <Checkbox
               label="All Items"
@@ -91,7 +91,7 @@ class SetItems extends React.Component {
             </div>
             </div>
             <div className="check-new">
-            <span className="grey-box">CH</span>
+            <p>CH</p>
             <div className="main-check">
             <Checkbox
               label="Chocolate Cake"
@@ -101,7 +101,7 @@ class SetItems extends React.Component {
             </div>
             </div>
              <div className="check-new">
-            <span className="grey-box">C0</span>
+            <p>C0</p>
             <div className="main-check">
             <Checkbox
               label="Coffee"
@@ -111,7 +111,7 @@ class SetItems extends React.Component {
             </div>
             </div>
              <div className="check-new">
-            <span className="grey-box">CU</span>
+            <p>CU</p>
             <div className="main-check">
             <Checkbox
               label="Cupcake"
