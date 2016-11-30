@@ -34,7 +34,6 @@ import VisibilityOff from 'material-ui/svg-icons/action/visibility-off';
 import AllCategory from './all_categories_dropdown';
 import SetItems from './set_items';
 import CreateModifier from './create_modifier';
-import Category from './category'
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 // injectTapEventPlugin();
@@ -196,7 +195,6 @@ class ItemDetail extends React.Component {
                 textTransform:"inherit",
                 fontSize: "16px",
               }}>
-              <Category/>
             </Tab>
 
             <Tab label="Promo Codes" 
