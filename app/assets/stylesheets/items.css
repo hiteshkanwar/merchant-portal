@@ -2,6 +2,80 @@
 	 z-index: 1 !important;
 }
 
+.apply-set-btn button {
+    display: inline-block !important;
+    height: 34px !important;
+    padding: 0 1em;
+    border: 1px solid #bec3c8 !important;
+    border-radius: 3px !important;
+    background-color: #fafafa !important;
+    font-size: 14px !important;
+    color: #2996cc !important;
+    font-weight: bold !important;
+    line-height: 34px !important;
+}
+.set-item-box h3{
+    text-align: center !important;
+}
+.check-box-list div{
+    margin-bottom: 0px !important;
+}
+.check-new span {
+    background-color: #9da2a6;
+    color: #fff;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    width: 40px;
+    text-transform: uppercase;
+}
+.check-new .main-check {
+    float: right;
+    margin-top: 8px;
+    width: 90% !important;
+}
+
+.check-new{
+    overflow-y: auto;
+}
+.search-flat .search-field {
+    margin: 0 -24px;
+    width: 100%;
+}
+.check-box-list {
+    height: 200px;
+    overflow: auto;
+    margin: 0 -24px;
+}
+/*.check-box-list div {
+    margin-bottom: 0 !important;
+    margin-left: 50px;
+    position: relative;
+    top: -10px;
+    vertical-align: top;
+}
+.check-box-list span {
+    background-color: #666;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+    vertical-align: top;
+}*/
+.search-flat .search-field input {
+    border-radius: 0;
+    height: auto;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    padding: 13px 0 13px 45px;
+    line-height: normal;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    background-position: left 10px center;
+}
 .import-btn-new{
 	float: right !important;
 }

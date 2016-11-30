@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :items, only: [:index] do
         get :library, on: :collection
         get :modifier, on: :collection
+        get :category, on: :collection
       end
     end
   end

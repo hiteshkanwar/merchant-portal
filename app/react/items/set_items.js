@@ -66,40 +66,60 @@ class SetItems extends React.Component {
     ];
   return (
       <div>
-        <FlatButton label="Apply Set to Items" primary={true}  onClick={this.handleOpen}/>
+        <div className="apply-set-btn"><FlatButton label="Apply Set to Items" primary={true}  onClick={this.handleOpen}/></div>
         <Dialog
           title="Apply Set to Items"
           actions={actions}
           modal={true}
           open={this.state.open}
           contentStyle={customContentStyle}> 
-          <div>The ‘Coffee Modifiers’ modifier set will be applied to 1 items.</div>
-          <Divider />
+          <div><center>The ‘Coffee Modifiers’ modifier set will be applied to 1 items.</center></div>
+          <div className="search-flat">
           <div className="search-field">
             <input type="text" />
           </div>
-          <div>
+          </div>
+          <div className="check-box-list">
+            <div className="check-new">
+            <span>ALL</span>
+            <div className="main-check">
             <Checkbox
               label="All Items"
               labelPosition="left"
               style={styles.checkbox}
             />
+            </div>
+            </div>
+            <div className="check-new">
+            <span>CH</span>
+            <div className="main-check">
             <Checkbox
               label="Chocolate Cake"
               labelPosition="left"
               style={styles.checkbox}
             />
+            </div>
+            </div>
+             <div className="check-new">
+            <span>C0</span>
+            <div className="main-check">
             <Checkbox
               label="Coffee"
               labelPosition="left"
               style={styles.checkbox}
             />
+            </div>
+            </div>
+             <div className="check-new">
+            <span>CU</span>
+            <div className="main-check">
             <Checkbox
               label="Cupcake"
               labelPosition="left"
               style={styles.checkbox}
             />
-
+            </div>
+            </div>
           </div>
         </Dialog>
       </div>

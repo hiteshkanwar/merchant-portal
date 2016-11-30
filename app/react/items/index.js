@@ -34,6 +34,7 @@ import VisibilityOff from 'material-ui/svg-icons/action/visibility-off';
 import AllCategory from './all_categories_dropdown';
 import SetItems from './set_items';
 import CreateModifier from './create_modifier';
+import Category from './category'
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 // injectTapEventPlugin();
@@ -88,7 +89,7 @@ class ItemDetail extends React.Component {
             data-method="delete"/>
             <MenuItem className="menu first-menu"><a href="/dashboard" className="link-tag">Home</a></MenuItem>
             <MenuItem className="menu">Sales</MenuItem>
-            <MenuItem className="menu"><a href="/items" className="link-tag">Items</a></MenuItem>
+            <MenuItem className="menu"><a href="/dashboard/items/library" className="link-tag">Items</a></MenuItem>
             <MenuItem className="menu">Customers</MenuItem>
             <MenuItem className="menu " primaryText="Analytics"  rightIcon={<ArrowDropRight />}
               menuItems={[
@@ -195,6 +196,7 @@ class ItemDetail extends React.Component {
                 textTransform:"inherit",
                 fontSize: "16px",
               }}>
+              <Category/>
             </Tab>
 
             <Tab label="Promo Codes" 
@@ -297,14 +299,14 @@ class StaticDrawer extends React.Component{
       display: 'none',
     }}/>
         <Drawer open={this.state.open}  width={60} >
-          <MenuItem className="search-icon"><img src="../assets/magnify.svg"/></MenuItem>
+          <MenuItem className="search-icon"><img src="/assets/magnify.svg"/></MenuItem>
           <ul className="smallmenu">
-            <li><MenuItem><img src="../assets/home.svg"/></MenuItem>
+            <li><MenuItem><img src="/assets/home.svg"/></MenuItem>
                 <ul>
             <li><a href="#">Home</a></li>
           </ul>
             </li>
-            <li><MenuItem><img src="../assets/chart-line.svg"/></MenuItem>
+            <li><MenuItem><img src="/assets/chart-line.svg"/></MenuItem>
               <ul>
             <li><a href="#">Sales</a></li>
             <li><a href="#">Brand</a></li>
@@ -313,7 +315,7 @@ class StaticDrawer extends React.Component{
             <li><a href="#">Customers</a></li>
           </ul>
             </li>
-            <li><MenuItem><img src="../assets/settings.svg"/></MenuItem>
+            <li><MenuItem><img src="/assets/settings.svg"/></MenuItem>
               <ul>
                 <li><a href="#">Settings</a></li>
                 <li><a href="#">Chalkboard</a></li>
@@ -322,7 +324,7 @@ class StaticDrawer extends React.Component{
                 <li><a href="#">Hours</a></li>
               </ul>
             </li>
-            <li><MenuItem><img src="../assets/library-books.svg"/></MenuItem>
+            <li><MenuItem><img src="/assets/library-books.svg"/></MenuItem>
               <ul>
                 <li><a href="#">Flash</a></li>
                 <li><a href="#">Cash</a></li>
@@ -341,6 +343,5 @@ class StaticDrawer extends React.Component{
 function handleActive(tab) {
   alert(`A tab with this route property ${tab.props['data-route']} was activated.`);
 }
-
 
 export default ItemDetail;

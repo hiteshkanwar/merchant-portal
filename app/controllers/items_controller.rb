@@ -7,4 +7,7 @@ class ItemsController < ApplicationController
 
 	def modifier
 	end
+
+	def category
+	end
 end
