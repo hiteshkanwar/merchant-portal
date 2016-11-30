@@ -126,5 +126,4 @@ class SetItems extends React.Component {
     );
   }  
 }
-
 export default SetItems;
