@@ -20,7 +20,7 @@
 .check-box-list div{
     margin-bottom: 0px !important;
 }
-.check-new p {
+.check-new .grey-box {
     background-color: #9da2a6;
     color: #fff;
     display: inline-block;
