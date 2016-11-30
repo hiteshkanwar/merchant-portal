@@ -20,7 +20,7 @@
 .check-box-list div{
     margin-bottom: 0px !important;
 }
-.check-new span {
+.check-new .grey-box {
     background-color: #9da2a6;
     color: #fff;
     display: inline-block;
@@ -38,9 +38,9 @@
     width: 90% !important;
 }
 
-.check-new{
+/*.check-new{
     overflow-y: auto;
-}
+}*/
 .search-flat .search-field {
     margin: 0 -24px;
     width: 100%;
