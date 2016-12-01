@@ -1,0 +1,109 @@
+.pull-right{
+	float: right;
+}
+.taxes-header {
+    border-bottom: 1px solid #bec3c8;
+    border-top: 1px solid #bec3c8;
+
+    overflow-y: auto;
+    padding: 15px 15px 12px;
+}
+.taxes-header h3 {
+    display: inline;
+    font-size: 20px !important;
+    font-weight: normal !important;
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+    color: #32373c !important;
+}
+.taxes-table th:first-child{
+	display: none !important;
+}
+.taxes-table tr{
+	border-bottom: 1px solid #bec3c8 !important;
+}
+.taxes-table th{
+	font-size: 14px !important;
+	color: #32373c !important;
+	font-weight: bold !important;
+}
+.taxes-table td{
+	font-size: 14px !important;
+	color: #32373c !important;
+}
+
+.taxes-header2 {
+    border-bottom: 1px solid #bec3c8;
+    border-top: none;
+    margin-top: 50px;
+    overflow-y: auto;
+    padding: 15px 15px 12px;
+}
+.taxes-header2 h3 {
+    display: inline;
+    font-size: 20px !important;
+    font-weight: normal !important;
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+    color: #32373c !important;
+}
+
+.taxes-header2 .import-btn button span{
+	font-weight: normal !important;
+
+}
+.taxes-header .import-btn button span{
+	font-weight: normal !important;
+
+}
+.add-new-form {
+    padding: 25px;
+
+}
+.two-form {
+    margin: 10px 0;
+    overflow-y: auto;
+}
+.input-60 {
+    float: left;
+    margin-right: 10px;
+    width: 64% !important;
+}
+.input-40{
+	width: 25% !important;
+	float: left;
+}
+.two-form input {
+    border-radius: 3px;
+}
+.clearfix{
+	width: 100%;
+	clear: both;
+}
+
+
+.add-new-form p{
+	font-size: 13px;
+	color: #64696e
+}
+
+.buttons-bottom {
+    bottom: 15px;
+    position: absolute;
+    right: 36px;
+    text-align: right;
+}
+.learn-more-link {
+	color: #3ba8de;
+	text-decoration: none;
+}
+.tax-form p{
+	font-size: 14px;
+    color: #64696e;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.apply-set-btn{
+	margin-left: -20px !important;
+}

@@ -24,6 +24,7 @@ import ReactTooltip from 'react-tooltip';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import Slider from 'material-ui/Slider';
 import CreateItem from './create_item';
+import Taxes from './taxes';
 import ImportItem from './import_item';
 import SelectField from 'material-ui/SelectField';
 import Checkbox from 'material-ui/Checkbox';
@@ -33,6 +34,7 @@ import Visibility from 'material-ui/svg-icons/action/visibility';
 import VisibilityOff from 'material-ui/svg-icons/action/visibility-off';
 import AllCategory from './all_categories_dropdown';
 import SetItems from './set_items';
+import Category from './category'
 import CreateModifier from './create_modifier';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -98,6 +100,7 @@ class ItemDetail extends React.Component {
                 <MenuItem primaryText="New vs. Old" />,
                 <MenuItem primaryText="Customers" />,
               ]} />
+              <MenuItem className="menu first-menu"><a href="/settings" className="link-tag">Settings</a></MenuItem>
           </Drawer>
         </div>
 
@@ -195,6 +198,7 @@ class ItemDetail extends React.Component {
                 textTransform:"inherit",
                 fontSize: "16px",
               }}>
+              <Category/>
             </Tab>
 
             <Tab label="Promo Codes" 
@@ -215,18 +219,9 @@ class ItemDetail extends React.Component {
                 textTransform:"inherit",
                 fontSize: "16px",
               }}>
+              <Taxes/>
             </Tab>
             <Tab label="Gift Cards" 
-              style={{
-                backgroundColor: '#fff',
-                color:"#64696e",
-                fontWeight:"bold",
-                textTransform:"inherit",
-                fontSize: "16px",
-              }}>
-            </Tab>
-
-            <Tab label="Settings" 
               style={{
                 backgroundColor: '#fff',
                 color:"#64696e",

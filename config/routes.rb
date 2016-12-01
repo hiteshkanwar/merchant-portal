@@ -15,7 +15,8 @@ Rails.application.routes.draw do
     end
   end
 
-  
+  resources :settings, only: [:index] do 
+  end
   
   
 	# root to: 'react_examples#component'

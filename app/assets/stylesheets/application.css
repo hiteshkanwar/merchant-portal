@@ -14,6 +14,8 @@
  *= require style
  *= require dashboard
  *= require items
+ *= require taxes
  *= require create_items
+ *= require category
  * require_self
  */

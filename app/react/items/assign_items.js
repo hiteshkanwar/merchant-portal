@@ -50,7 +50,7 @@ class AsssignItems extends React.Component {
           marginRight:'7px',
           float: 'left',
         }}
-        label="Close"
+        label="Cancel"
         onClick={this.handleClose}/>,
       <FlatButton
           style={{
@@ -61,19 +61,20 @@ class AsssignItems extends React.Component {
           backgroundColor:'#2996cc',
           marginRight:'7px',
         }}
-        label="Apply to Items"
+        label="Move Items"
         onClick={this.handleClose}/>,
     ];
   return (
       <div>
-        <div className="apply-set-btn"><FlatButton label="Apply Set to Items" primary={true}  onClick={this.handleOpen}/></div>
+        <div className="apply-set-btn"><FlatButton label="Assign Items" primary={true}  onClick={this.handleOpen}/></div>
         <Dialog
-          title="Apply Set to Items"
+          title="Assign Items to Breakfast before 4:30"
           actions={actions}
           modal={true}
           open={this.state.open}
           contentStyle={customContentStyle}> 
-          <div><center>The ‘Coffee Modifiers’ modifier set will be applied to 1 items.</center></div>
+          <div><center>Items currently in other categories will be reassigned to this one.
+2 items will be assigned to Category Breakfast before 4:30</center></div>
           <div className="search-flat">
           <div className="search-field">
             <input type="text" />
@@ -121,6 +122,7 @@ class AsssignItems extends React.Component {
             </div>
             </div>
           </div>
+          <div className="border-bottom"><Divider/></div>
         </Dialog>
       </div>
     );
