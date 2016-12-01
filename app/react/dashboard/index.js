@@ -23,6 +23,7 @@ import Checkbox from 'material-ui/Checkbox';
 import ReactTooltip from 'react-tooltip';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import Slider from 'material-ui/Slider';
+import Selectbox from './multiple_select';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
@@ -42,6 +43,7 @@ class Dashboard extends React.Component {
       showCheckboxes: false,
     };
     this.handleToggle = this.handleToggle.bind(this);
+    this.handleOpen= this.handleOpen.bind(this);
   }
 
   handleToggle(){         
@@ -55,9 +57,14 @@ class Dashboard extends React.Component {
     );
   }
   
+  handleOpen(){
+    this.setState({open: true});
+  }
 
   render() {
+    
     return (
+
       <div >
         <ReactTooltip />
         <div className="sidebar ">
@@ -70,6 +77,8 @@ class Dashboard extends React.Component {
             <MenuItem className="menu"><a href="/dashboard/items/library" className="link-tag">Items</a></MenuItem>
             <MenuItem className="menu">Employees</MenuItem>
             <MenuItem className="menu">Customers</MenuItem>
+            <MenuItem className="menu first-menu"><a href="/settings" className="link-tag">Settings</a></MenuItem>
+            
           </Drawer>
         </div>
         <div className = {'main-content ' + this.state.newClass}> 
@@ -80,7 +89,8 @@ class Dashboard extends React.Component {
              </div>
              <div className="index-grid">
                 <ul className="list-inline">
-                  <li><img src="/assets/grid.png"/></li>
+                  <li><img src="/assets/grid.png" onClick={this.handleOpen}/>
+                  </li>
                   <li><a href="#"><img src="/assets/help.png"/>Help
                     </a>
                   </li>
