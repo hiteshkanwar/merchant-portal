@@ -55,7 +55,7 @@ class CreateTax extends React.Component {
     return (
       <div>
         <RaisedButton
-          label="CreateItem"
+          label="Create Tax"
           onClick={this.handleToggle}
           className="import-btn"/>
         <Drawer width={560} openSecondary={true} open={this.state.open} >

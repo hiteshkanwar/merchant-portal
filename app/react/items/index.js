@@ -86,6 +86,15 @@ class ItemDetail extends React.Component {
           <StaticDrawer/>
           <RaisedButton label="nil" onClick={this.handleToggle}/>
           <Drawer open={this.state.open}>
+            <div className="user-profile-box">
+              <div className="user-pic-circle">
+              <span className="pic">
+              <img src="/assets/user.png"/>
+              </span>
+              </div>
+              <span className="user-first">test</span>
+              <span className="user-last">last</span>
+              </div>
             <MenuItem className="menu first-menu" primaryText="Sign out"  href="/users/sign_out" 
             data-method="delete"/>
             <MenuItem className="menu first-menu"><a href="/dashboard" className="link-tag">Home</a></MenuItem>

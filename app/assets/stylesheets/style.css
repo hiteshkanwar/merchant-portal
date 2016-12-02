@@ -10,6 +10,7 @@ body{
 	color: #fff !important;
 	background-color: transparent !important;
 }
+
 .delete-category p , .delete-item p{
 	color: red;
 	font-weight: normal;
@@ -23,6 +24,28 @@ body{
 .sidebar button > div > div{
 	height: 60px !important;
 	background-color: transparent !important;	
+}
+.user-profile-box{
+	padding: 50px 0px 0px 15px !important;
+}
+.user-profile-box .user-first, .user-profile-box .user-last{
+	color: #fff;
+	margin-right: 5px;
+}
+.user-pic-circle{
+	display: block;
+	margin-bottom: 10px;
+}
+.user-pic-circle span{
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	overflow: hidden;
+}
+.user-pic-circle .pic img{
+	width: 100%;
 }
 .sidebar button > div > div > span{
 	color: transparent !important;

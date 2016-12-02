@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
   root :to => redirect('/dashboard')
   # root to: 'dashboard#index'
+  get '/dashboard/sales' => "dashboard#sales"
   resources :dashboard, path: "/dashboard", only: [:index] do
     collection do
       resources :items, only: [:index] do

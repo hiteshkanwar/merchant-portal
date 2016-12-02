@@ -8,6 +8,12 @@ import MenuItem from 'material-ui/MenuItem';
 import Checkbox from 'material-ui/Checkbox';
 import Toggle from 'material-ui/Toggle';
 import Delete from 'material-ui/svg-icons/action/delete';
+import DiningSelect from './select_dining';
+import AssignItemPopup from './assign_item_popup';
+import Asssign from './select_tax';
+
+
+
 const styles = {
     customWidth: {
       width: 200,
@@ -55,12 +61,12 @@ class CreateTaxRule extends React.Component {
     return (
       <div>
         <RaisedButton
-          label="CreateItem"
+          label="Create Tax Rule"
           onClick={this.handleToggle}
           className="import-btn"/>
         <Drawer width={560} openSecondary={true} open={this.state.open} >
           <form className="add-new-form">
-            <label><b>RULE NAME</b></label>
+            <label>RULE NAME</label>
             <div className="two-form">
             <div className="form-group">
               <input type="text" placeholder="Name"/>
@@ -73,21 +79,21 @@ class CreateTaxRule extends React.Component {
               </p>
               </div>
             <div className="clearfix"></div>
-              <label><b>DO NOT APPLY TAX:</b></label>
+              <label>DO NOT APPLY TAX:</label>
               <div className="form-group"  >
                 <div className = "select-tax">
-                <input type="text" placeholder="Select tax" disabled="true"/>
+                <Asssign/>
                 </div>
               </div>
 
-            <label><b>WHEN DINING OPTION IS:</b></label>
+            <label>WHEN DINING OPTION IS:</label>
             <div className="form-group">
-              <input type="text" placeholder="Select Dining Option" disabled="true"/>
+              <DiningSelect/>
             </div>
 
-            <label><b>FOR ITEMS:</b></label>
+            <label>FOR ITEMS:</label>
             <div className="form-group">
-              <input type="text" placeholder="Assign Items" disabled="true"/>
+              <AssignItemPopup/>
             </div>
 
             <div className="footer-buttons buttons-bottom">
