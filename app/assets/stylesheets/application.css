@@ -15,7 +15,6 @@
  *= require dashboard
  *= require items
  *= require taxes
- *= require sales
  *= require create_items
  *= require category
  * require_self
