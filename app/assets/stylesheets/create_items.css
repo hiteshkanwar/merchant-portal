@@ -1,9 +1,9 @@
 .item-tabs > div > div{
-	 z-index: 1 !important;
+     z-index: 1 !important;
 }
 
 /*.import-btn-new{
-	float: right !important`;
+    float: right !important`;
 }*/
 .add-new-top{
     overflow-y:auto; 
@@ -56,7 +56,7 @@
     width: 95%;
 }
 .add-new-form .input-name:focus{
-	border-color:#2996cc;
+    border-color:#2996cc;
 }
 .add-new-form legend {
     font-size: 13px;
@@ -72,20 +72,20 @@
     padding: 0;
 }
 .check-main div{
-	margin-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 .multiple-input input{
-	width: 45%;
-	border: none;
+    width: 45%;
+    border: none;
 }
 .multiple-input input:focus{
-	border: none;
+    border: none;
 }
 .multiple-input {
     border: 1px solid #e5e5e5;
 }
 .multiple-input .form-group {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .buttons-bottom {
@@ -185,5 +185,5 @@
     vertical-align: top;
 }
 .info-icon {
-    vertical-align: middle !important;
+    vertical-align: top !important;
 }
