@@ -11,5 +11,5 @@ RWR.registerComponent('Dashboard', Dashboard);
 // import Settings from './settings/index';
 // RWR.registerComponent('Settings', Settings);
 
-import Sales from './dashboard/sales';
-RWR.registerComponent('Sales', Sales);
+// import Sales from './dashboard/sales';
+// RWR.registerComponent('Sales', Sales);
