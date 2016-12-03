@@ -16,6 +16,7 @@
  *= require items
  *= require taxes
  *= require setting
+ *= require sales
  *= require create_items
  *= require category
  * require_self

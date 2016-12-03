@@ -1,0 +1,46 @@
+svg.donutchart {
+    width: 48%;
+    margin-top: 35px;
+    margin: 0 auto !important;
+    float: none;
+    text-align: center;
+    margin-left: 240px !important;
+}
+.donutchart-arcs{
+	width: 300px !important;
+}
+.search-field > div {
+    float: left !important;
+    width: 200px !important;
+}
+.search-field div a {
+	text-decoration: none ;
+	color: #2996cc;
+	line-height: 55px;
+}
+.search-field button {
+    margin-top: 10px !important;
+}
+
+.category {
+    width: 25% !important;
+}
+.table-border{
+	overflow-y: auto;
+	border: 1px solid #ccc;
+}
+
+/*.date-pic div:nth-child(1) {
+    position: inherit !important;
+    font-size: 16px !important;
+    height: 35px !important;
+    line-height: 35px !important;
+    margin-left: 10px !important;
+    padding-top: 5px !important;
+}
+
+.date-pic input{
+	border: 1px solid #333 !important;
+	border-radius: 25px !important;
+}
+*/
