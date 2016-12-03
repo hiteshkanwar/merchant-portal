@@ -8,8 +8,8 @@ import Dashboard from './dashboard/index';
 RWR.registerComponent('Dashboard', Dashboard);
 
 
-// import Settings from './settings/index';
-// RWR.registerComponent('Settings', Settings);
+import Setting from './settings/index';
+RWR.registerComponent('Setting', Setting);
 
 // import Sales from './dashboard/sales';
 // RWR.registerComponent('Sales', Sales);

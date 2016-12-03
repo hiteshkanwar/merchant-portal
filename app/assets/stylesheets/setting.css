@@ -1,0 +1,93 @@
+.first-section-box{
+	background-color: #F7F7F7;
+	overflow: auto;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+.heading-text {
+	color: #E26A6A !important;
+	font-size: 16px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #ddd;
+	text-align: left;
+	padding-bottom: 10px;
+}
+.image-box .left-box, .image-box .right-box{
+	width: 47%;
+	float: left;
+	padding: 15px;
+
+}
+.image-box-new .left-box, .image-box-new .right-box{
+	width: 47%;
+	float: left;
+	padding: 15px;
+
+}
+.image-box-new .imgPreview img {
+	width: 150px;
+}
+.image-box{
+	overflow: auto;
+	margin-bottom: 20px;
+	padding: 20px 0px;
+}
+.image-box .fileInput{
+	float: left;
+	margin-left: 30%;
+	width: 17%;
+	text-align: right !important;
+}
+.image-box-new .fileInput{
+	float: left;
+	margin-left: 30%;
+	width: 17%;
+	text-align: right !important;
+}
+.imgPreview {
+	width: 47%;
+	float: left;
+}
+.imgPreview img {
+	width: 100%;
+}
+.image-box .left-box{
+	text-align: right;
+}
+.clearfix{
+	clear: both;
+	width: 100%;
+}
+.submit-box {
+	padding: 20px;
+	border-top: 1px solid #ccc;
+	margin-top: 25px;
+	text-align: center;
+}
+.submit-box input[type="button"]{
+
+	border: 1px solid #ccc;
+	padding: 10px 20px;
+	background-color: green;
+	color: #fff;
+}
+
+.form-fields label {
+	width: 25%;
+	position: relative;
+	display: block;
+	float: left;
+	text-align: right;
+	margin-right: 25px;
+}
+.form-fields input[type="text"], .form-fields select {
+	min-height: 30px;
+	width: 48%;
+	border: 1px solid #e5e5e5;
+}
+.icon-image{
+	vertical-align: sub
+}
+.icon-image1{
+	vertical-align: middle
+}
