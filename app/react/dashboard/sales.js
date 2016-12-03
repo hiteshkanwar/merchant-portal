@@ -70,16 +70,9 @@ class Sales extends React.Component {
             <MenuItem className="menu first-menu"><a href="/dashboard" className="link-tag">Home</a></MenuItem>
             <MenuItem className="menu"><a href="/dashboard/sales" className="link-tag">Sales</a></MenuItem>
             <MenuItem className="menu"><a href="/dashboard/items/library" className="link-tag">Items</a></MenuItem>
+            <MenuItem className="menu first-menu"><a href="/settings" className="link-tag">Settings</a></MenuItem>
             <MenuItem className="menu">Customers</MenuItem>
-            <MenuItem className="menu " primaryText="Analytics"  rightIcon={<ArrowDropRight />}
-              menuItems={[
-                <MenuItem primaryText="Sales" />,
-                <MenuItem primaryText="Brands" />,
-                <MenuItem primaryText="Trends" />,
-                <MenuItem primaryText="New vs. Old" />,
-                <MenuItem primaryText="Customers" />,
-              ]} />
-          </Drawer>
+        </Drawer>
         </div>
 
         <div className = {'main-content ' + this.state.newClass}> 
