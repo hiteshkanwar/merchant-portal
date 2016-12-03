@@ -96,7 +96,7 @@ class CreateItem extends React.Component {
             <fieldset></fieldset>
 
             <div className="form-group">
-              <label>INVENTORY 
+              <label className="inventory">INVENTORY 
               <a href="#" className="info-icon"><img src="/assets/help.png"/></a>
               </label><br/>
               <div className="traking-btn">
@@ -105,14 +105,13 @@ class CreateItem extends React.Component {
             </div>
             <fieldset></fieldset>
             <label>MODIFIER SETS</label>
+            <label>MODIFIER SETS</label>
             <div className="modifiers-box">
-            
               <div className="form-group">
-                 <Checkbox label="Coffee Modifiers" style={styles.checkbox}/>
-                 <Checkbox label="Size" style={styles.checkbox}/>
+                 <div className="check-block"><Checkbox label="Coffee Modifiers" style={styles.checkbox}/><span className="right-link"><a href="#">customize</a><img src="/assets/info.png"/></span></div>
+                <div className="check-block"> <Checkbox label="Size" style={styles.checkbox}/><span className="right-link"><a href="#">customize</a><img src="/assets/info.png"/></span></div>
               </div>
             </div>
-             <fieldset></fieldset>
             <div className="form-group">
               <Toggle label="Skip detail screen in Register" labelPosition="right" style={styles.toggle}/>
             </div>

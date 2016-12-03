@@ -89,16 +89,16 @@ class ItemDetail extends React.Component {
             <div className="user-profile-box">
               <div className="user-pic-circle">
               <span className="pic">
-              <img src="/assets/user.png"/>
+              <img src="/assets/dario.jpeg"/>
               </span>
               </div>
-              <span className="user-first">test</span>
-              <span className="user-last">last</span>
+              <span className="user-first">Dario</span>
+              <span className="user-last">Matias</span>
               </div>
             <MenuItem className="menu first-menu" primaryText="Sign out"  href="/users/sign_out" 
             data-method="delete"/>
             <MenuItem className="menu first-menu"><a href="/dashboard" className="link-tag">Home</a></MenuItem>
-            <MenuItem className="menu">Sales</MenuItem>
+            <MenuItem className="menu"><a href="/dashboard/sales" className="link-tag">Sales</a></MenuItem>
             <MenuItem className="menu"><a href="/dashboard/items/library" className="link-tag">Items</a></MenuItem>
             <MenuItem className="menu">Customers</MenuItem>
             <MenuItem className="menu " primaryText="Analytics"  rightIcon={<ArrowDropRight />}
