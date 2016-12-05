@@ -19,7 +19,14 @@ const style = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-
+  }
+};
+const styles = {
+  rootparent: {
+    backgroundImage : "url(/assets/grid.png )",
+    backgroundColor:'#fff',
+    backgroundRepeat:'no-repeat',
+    backgroundPosition:'top',
   }
 };
 
@@ -43,56 +50,61 @@ class AddRemoveSelect extends React.Component {
       <div>
         <SelectableList defaultValue={3}>
           <div style={style.root}>
-            <ListItem
-            primaryText="Deposits"
+            <ListItem style={styles.rootparent}
+            label="Deposits"
+
               value={1}
-              
+                  
                   nestedItems={[
+
+                  <div className="grid-list">
+
                    <ListItem
                     value={"Deposits"}
                     primaryText="Deposits"
                     leftCheckbox={<Checkbox value="Deposits" onClick={this.handleCheck}/>}                 
-                  />,
+                  />
                   <ListItem
                     value={"Gross Sales"}
                     primaryText="Gross Sales"
                     leftCheckbox={<Checkbox value="Gross_Sales" onClick={this.handleCheck}/>}                 
-                  />,
+                  />
                   <ListItem
                     value={"Top items by sales"}
                     primaryText="Top items by Sales"
                     leftCheckbox={<Checkbox value="Top_items_by_Sales" onClick={this.handleCheck}/>}
-                  />,
+                  />
                   <ListItem
                     value={"Top Categories by Sales"}
                     primaryText="Top Categories by Sales"
                     leftCheckbox={<Checkbox value="Top_Categories_by_Sales" onClick={this.handleCheck}/>}
-                  />,
+                  />
                   <ListItem
                     value={"Your Customers"}
                     primaryText="Your Customers"
                     leftCheckbox={<Checkbox value="Your_Customers" onClick={this.handleCheck}/>}
-                  />,
+                  />
                   <ListItem
                     value={"Customer Pending"}
                     primaryText="Customer Pending"
                     leftCheckbox={<Checkbox value="Customer_Pending" onClick={this.handleCheck}/>}
-                  />,
+                  />
                   <ListItem
                     value={"Customers Visits"}
                     primaryText="Customers Visits"
                     leftCheckbox={<Checkbox value="Customers_Visits" onClick={this.handleCheck}/>}
-                  />,
+                  />
                   <ListItem
                     value={"Customer Frequency"}
                     primaryText="Customer Frequency"
                     leftCheckbox={<Checkbox value="Customer_Frequency" onClick={this.handleCheck}/>}
-                  />,
+                  />
                   <ListItem
                     value={"Customers Recency"}
                     primaryText="Customers Recency"
                     leftCheckbox={<Checkbox value="Customers_Recency" onClick={this.handleCheck}/>}
-                  />,                      
+                  />
+                  </div>                     
               ]}
             />
           </div>      

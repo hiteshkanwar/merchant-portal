@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Drawer from 'material-ui/Drawer';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -8,6 +9,9 @@ import MenuItem from 'material-ui/MenuItem';
 import Checkbox from 'material-ui/Checkbox';
 import Toggle from 'material-ui/Toggle';
 import Delete from 'material-ui/svg-icons/action/delete';
+
+var Dropzone = require('react-dropzone');
+
 const styles = {
     customWidth: {
       width: 200,
@@ -63,8 +67,9 @@ class CreateItem extends React.Component {
           <div className="form-wrapper">
           <div className="add-new-top">
           <div className="add-new-left">
-            <div className="form-group">
-              <input type="file" placeholder="Name" />
+            <div className="form-group edit-photo">
+               <DropzoneDemo
+               />
             </div>
             </div>
             <div className="add-new-right">
@@ -88,7 +93,6 @@ class CreateItem extends React.Component {
               <input type="text" placeholder="Name" className="input1"/>
               <input type="text" placeholder="price" className="input2"/>
               <input type="text" placeholder="SKU" className="input3"/>
-              
             </div>
             </div>
             <div className="clearfix"></div>
@@ -165,5 +169,34 @@ class CreateItem extends React.Component {
     );
   }
 }
+
+var DropzoneDemo = React.createClass({        
+    onDrop: function (files) {      
+      this.setState({
+        files: files
+      });
+    },
+
+    onOpenClick: function () {
+      this.refs.dropzone.open();
+    },
+
+    render: function () {
+      return (
+          <div>
+            <Dropzone ref="dropzone" onDrop={this.onDrop} >
+              <div></div>
+            </Dropzone>
+            <button type="button" onClick={this.onOpenClick}>
+              Edit
+            </button>
+            {this.state ? <div className="image-preview">
+           
+            <div >{this.state.files.map((file,i) => <b key={i}> <img src={file.preview} /></b>)}</div>
+            </div> : null}
+          </div>
+      );
+    }
+});
 
 export default CreateItem;

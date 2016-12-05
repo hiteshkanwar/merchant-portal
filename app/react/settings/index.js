@@ -81,11 +81,11 @@ class Setting extends React.Component{
             <span className="user-last">Matias</span>
             </div>
             <MenuItem  className="menu first-menu" primaryText="Sign out" href="/users/sign_out" data-method="delete"/>
-            <MenuItem className="menu first-menu"><a href="/dashboard" className="link-tag">Home</a></MenuItem>            
+            <MenuItem className="menu"><a href="/dashboard" className="link-tag">Home</a></MenuItem>            
             <MenuItem className="menu"><a href="/dashboard/sales" className="link-tag">Sales</a></MenuItem>
             <MenuItem className="menu"><a href="/dashboard/items/library" className="link-tag">Items</a></MenuItem>
-            <MenuItem className="menu first-menu"><a href="/settings" className="link-tag">Settings</a></MenuItem>
-            <MenuItem className="menu">Customers</MenuItem> 
+            <MenuItem className="menu"><a href="/settings" className="link-tag">Settings</a></MenuItem>
+            <MenuItem className="menu">Customers</MenuItem>
           </Drawer>
         </div>
         <div className = {'main-content ' + this.state.newClass}> 
@@ -229,41 +229,30 @@ class StaticDrawer extends React.Component{
       display: 'none',
     }}/>
         <Drawer open={this.state.open}  width={60} >
-          <MenuItem className="search-icon"><img src="/assets/magnify.svg"/></MenuItem>
+          <MenuItem className="search-icon"><img src="/assets/magnify.svg"/>
+          </MenuItem>
           <ul className="smallmenu">
             <li><MenuItem><img src="/assets/home.svg"/></MenuItem>
-                <ul>
-            <li><a href="#">Home</a></li>
-          </ul>
+            <ul>
+              <li><a href="#">Home</a></li>
+            </ul>
             </li>
             <li><MenuItem><img src="/assets/chart-line.svg"/></MenuItem>
               <ul>
-            <li><a href="#">Sales</a></li>
-            <li><a href="#">Brand</a></li>
-            <li><a href="#">Trends</a></li>
-            <li><a href="#">New vs.Old</a></li>
-            <li><a href="#">Customers</a></li>
-          </ul>
+                <li><a href="#">Sales</a></li>
+              </ul>
             </li>
             <li><MenuItem><img src="/assets/settings.svg"/></MenuItem>
               <ul>
                 <li><a href="#">Settings</a></li>
-                <li><a href="#">Chalkboard</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Inventroy</a></li>
-                <li><a href="#">Hours</a></li>
               </ul>
             </li>
             <li><MenuItem><img src="/assets/library-books.svg"/></MenuItem>
               <ul>
-                <li><a href="#">Flash</a></li>
-                <li><a href="#">Cash</a></li>
-                <li><a href="#">Staff</a></li>
-                <li><a href="#">Transactions</a></li>
+                <li><a href="#">Items</a></li>
               </ul>
             </li>
-          </ul>
-          
+          </ul>  
         </Drawer>
       </div>
     );

@@ -65,12 +65,21 @@ class Sales extends React.Component {
           <StaticDrawer/>
           <RaisedButton label="nil" onClick={this.handleToggle}/>
           <Drawer open={this.state.open}>
+             <div className="user-profile-box">
+            <div className="user-pic-circle">
+            <span className="pic">
+            <img src="/assets/dario.jpeg"/>
+            </span>
+            </div>
+            <span className="user-first">Dario</span>
+            <span className="user-last">Matias</span>
+            </div>
             <MenuItem className="menu first-menu" primaryText="Sign out"  href="/users/sign_out" 
             data-method="delete"/>
             <MenuItem className="menu first-menu"><a href="/dashboard" className="link-tag">Home</a></MenuItem>
             <MenuItem className="menu"><a href="/dashboard/sales" className="link-tag">Sales</a></MenuItem>
             <MenuItem className="menu"><a href="/dashboard/items/library" className="link-tag">Items</a></MenuItem>
-            <MenuItem className="menu first-menu"><a href="/settings" className="link-tag">Settings</a></MenuItem>
+            <MenuItem className="menu"><a href="/settings" className="link-tag">Settings</a></MenuItem>
             <MenuItem className="menu">Customers</MenuItem>
         </Drawer>
         </div>
@@ -89,14 +98,13 @@ class Sales extends React.Component {
                    <DatePick/>
                   </div>
 
-                  <div className="category">
+                  <div className="all-daycategory category">
                    <AllCustom/>
                   </div>
                   <div className="search-field">
                     <Summary/>
                     <AdvanceOption/>
                   </div>
-                  <div className="clear"></div>
                     <ExportMenu/>
                   <div className="clear"></div>
                   <DonutChart
@@ -226,15 +234,26 @@ class StaticDrawer extends React.Component{
           <MenuItem className="search-icon"><img src="/assets/magnify.svg"/></MenuItem>
           <ul className="smallmenu">
             <li><MenuItem><img src="/assets/home.svg"/></MenuItem>
+            <ul>
+              <li><a href="#">Home</a></li>
+            </ul>
             </li>
             <li><MenuItem><img src="/assets/chart-line.svg"/></MenuItem>
+              <ul>
+                <li><a href="#">Sales</a></li>
+              </ul>
             </li>
             <li><MenuItem><img src="/assets/settings.svg"/></MenuItem>
+              <ul>
+                <li><a href="#">Settings</a></li>
+              </ul>
             </li>
             <li><MenuItem><img src="/assets/library-books.svg"/></MenuItem>
+              <ul>
+                <li><a href="#">Items</a></li>
+              </ul>
             </li>
-          </ul>
-          
+          </ul>  
         </Drawer>
       </div>
     );

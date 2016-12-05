@@ -163,7 +163,7 @@
 .form-wrapper{
     height: 520px;
     overflow: auto;
-    padding: 36px;
+    padding: 12px;
 }
 .add-new-form .footer-buttons{
     text-align: right;
@@ -187,3 +187,39 @@
 .info-icon {
     vertical-align: top !important;
 }
+.edit-photo div div{
+    width: 100% !important;
+    height: 80px !important;
+    margin-bottom:10px;
+
+}
+.add-new-form .add-new-right input{
+    width: 92.5%;
+}
+.edit-photo img{
+    width: 100%;
+    height: auto;
+}
+.edit-photo .image-preview {
+    position: absolute;
+    z-index: 1111;
+    top: 0;
+    width: 90% !important;
+    height: 68px !important;
+    overflow: hidden;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding: 7px;
+}
+
+.edit-photo button{
+    width: 100%;
+    background-color: #fff;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    padding: 6px 0;
+    color: rgb(41, 150, 204);
+    font-weight: bold;
+    font-size: 15px;
+}    

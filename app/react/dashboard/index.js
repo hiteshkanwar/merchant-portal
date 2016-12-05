@@ -23,6 +23,7 @@ import Checkbox from 'material-ui/Checkbox';
 import ReactTooltip from 'react-tooltip';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import Slider from 'material-ui/Slider';
+import AddRemoveSelect from './add_remove_check';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
@@ -80,13 +81,11 @@ class Dashboard extends React.Component {
             <span className="user-last">Matias</span>
             </div>
             <MenuItem  className="menu first-menu" primaryText="Sign out" href="/users/sign_out" data-method="delete"/>
-            <MenuItem className="menu first-menu"><a href="/dashboard" className="link-tag">Home</a></MenuItem>            
+            <MenuItem className="menu"><a href="/dashboard" className="link-tag">Home</a></MenuItem>            
             <MenuItem className="menu"><a href="/dashboard/sales" className="link-tag">Sales</a></MenuItem>
             <MenuItem className="menu"><a href="/dashboard/items/library" className="link-tag">Items</a></MenuItem>
-            <MenuItem className="menu">Employees</MenuItem>
+            <MenuItem className="menu"><a href="/settings" className="link-tag">Settings</a></MenuItem>
             <MenuItem className="menu">Customers</MenuItem>
-            <MenuItem className="menu first-menu"><a href="/settings" className="link-tag">Settings</a></MenuItem>
-            
           </Drawer>
         </div>
         <div className = {'main-content ' + this.state.newClass}> 
@@ -97,12 +96,14 @@ class Dashboard extends React.Component {
              </div>
              <div className="index-grid">
                 <ul className="list-inline">
-                  <li><img src="/assets/grid.png" onClick={this.handleOpen}/>
+                  <li><AddRemoveSelect
+                     
+                  />
                   </li>
                   <li><a href="#"><img src="/assets/help.png"/>Help
                     </a>
                   </li>
-                </ul>
+                </ul>                
              </div>
              </div>
            <div className="payment-box">
@@ -116,26 +117,24 @@ class Dashboard extends React.Component {
                     <p>Register with SpeedEtab Stripe managed accounts to receive deposits from your payments within one to two business days. Customers can order and you can continue to accept payments before your bank account is verified.</p>
                 </div>
               </div>
-           </div>
-           <div>
-            <div className="dashboard-box">
+           </div>           
+            <div className="dashboard-box" id="Deposits">
               <div className="widget-heading">
-                  <a id="ember2548"> Deposits
-                  </a>    
+                <a id="ember2548"> Deposits</a>    
               </div>
               <div className="widget-text widget-text-deposit ">
-                  <div className="widget-text-body ">
-                      <div className="widget-text--header">
-                        $91.52
-                      </div>
-                      <div className="widget-text--subtext">
-                        Upcoming Deposits <br></br>
-                      </div>
+                <div className="widget-text-body ">
+                  <div className="widget-text--header">
+                    $91.52
                   </div>
+                  <div className="widget-text--subtext">
+                    Upcoming Deposits <br></br>
                   </div>
+                </div>
               </div>
             </div>
-            <div className="dashboard-box">
+            
+            <div className="dashboard-box" id="Gross_Sales">
               <div className="widget-heading">
                   <a id="ember2548"> Gross Sales
                   </a>    
@@ -145,7 +144,7 @@ class Dashboard extends React.Component {
                 <h5>No sales yet today</h5>
               </div>
             </div>
-            <div className="dashboard-box">
+            <div className="dashboard-box" id="Top_items_by_Sales" >
               <div className="widget-heading">
                   <a id="ember2548"> Top items by Sales
                   </a>    
@@ -156,7 +155,7 @@ class Dashboard extends React.Component {
                 <h5>No sales yet today</h5>
               </div>
             </div>
-            <div className="dashboard-box">
+            <div className="dashboard-box" id="Top_Categories_by_Sales">
               <div className="widget-heading">
                   <a id="ember2548"> Top Categories by Sales
                   </a>    
@@ -166,7 +165,7 @@ class Dashboard extends React.Component {
                 <h5>No category sales today</h5>
               </div>
             </div>
-            <div className="dashboard-box">
+            <div className="dashboard-box"  id="Your_Customers">
               <div className="widget-heading">
                   <a id="ember2548"> Your Customers
                   </a>    
@@ -176,7 +175,7 @@ class Dashboard extends React.Component {
                 <h5>No customer information</h5>
               </div>
             </div>
-            <div className="dashboard-box">
+            <div className="dashboard-box" id="Customer_Pending">
               <div className="widget-heading">
                   <a id="ember2548"> Customer Pending
                   </a>    
@@ -186,7 +185,7 @@ class Dashboard extends React.Component {
                 <h5>No customer information</h5>
               </div>
             </div>
-            <div className="dashboard-box">
+            <div className="dashboard-box" id="Customers_Visits">
               <div className="widget-heading">
                   <a id="ember2548"> Customers Visits
                   </a>    
@@ -196,7 +195,7 @@ class Dashboard extends React.Component {
                 <h5>No customer information</h5>
               </div>
             </div>
-            <div className="dashboard-box">
+            <div className="dashboard-box" id="Customer_Frequency">
               <div className="widget-heading">
                   <a id="ember2548"> Customer Frequency
                   </a>    
@@ -206,39 +205,40 @@ class Dashboard extends React.Component {
                 <h5>No customer information</h5>
               </div>
             </div>
-             <div className="dashboard-box">
+             <div className="dashboard-box" id="Customers_Recency">
               <div className="widget-heading">
                   <a id="ember2548"> Customers Recency
                   </a>    
               </div>
               <div className="dashboard-content">
                  <table>
-                  <tr>
-                    <td width="80%"><b>Today</b></td>
-                    <td width="10%">0</td>
-                    <td width="10%">0%</td>
-                  </tr>
-                   <tr>
-                    <td width="80%"><b>Last 7 Days</b></td>
-                    <td width="10%">0</td>
-                    <td width="10%">0%</td>
-                  </tr>
-                   <tr>
-                    <td width="80%"><b>Last 30 Days</b></td>
-                    <td width="10%">0</td>
-                    <td width="10%">0%</td>
-                  </tr>
-                   <tr>
-                    <td width="80%"><b>Last Year</b></td>
-                    <td width="10%">0</td>
-                    <td width="10%">0%</td>
-                  </tr>
-                   <tr>
-                    <td width="80%"><b>More Than a year</b></td>
-                    <td width="10%">0</td>
-                    <td width="10%">0%</td>
-                  </tr>
-
+                  <tbody>
+                    <tr>
+                      <td width="80%"><b>Today</b></td>
+                      <td width="10%">0</td>
+                      <td width="10%">0%</td>
+                    </tr>
+                     <tr>
+                      <td width="80%"><b>Last 7 Days</b></td>
+                      <td width="10%">0</td>
+                      <td width="10%">0%</td>
+                    </tr>
+                     <tr>
+                      <td width="80%"><b>Last 30 Days</b></td>
+                      <td width="10%">0</td>
+                      <td width="10%">0%</td>
+                    </tr>
+                     <tr>
+                      <td width="80%"><b>Last Year</b></td>
+                      <td width="10%">0</td>
+                      <td width="10%">0%</td>
+                    </tr>
+                     <tr>
+                      <td width="80%"><b>More Than a year</b></td>
+                      <td width="10%">0</td>
+                      <td width="10%">0%</td>
+                    </tr>
+                   </tbody> 
                 </table>
               </div>
             </div>
@@ -305,41 +305,30 @@ class StaticDrawer extends React.Component{
       display: 'none',
     }}/>
         <Drawer open={this.state.open}  width={60} >
-          <MenuItem className="search-icon"><img src="/assets/magnify.svg"/></MenuItem>
+          <MenuItem className="search-icon"><img src="/assets/magnify.svg"/>
+          </MenuItem>
           <ul className="smallmenu">
             <li><MenuItem><img src="/assets/home.svg"/></MenuItem>
-                <ul>
-            <li><a href="#">Home</a></li>
-          </ul>
+            <ul>
+              <li><a href="#">Home</a></li>
+            </ul>
             </li>
             <li><MenuItem><img src="/assets/chart-line.svg"/></MenuItem>
               <ul>
-            <li><a href="#">Sales</a></li>
-            <li><a href="#">Brand</a></li>
-            <li><a href="#">Trends</a></li>
-            <li><a href="#">New vs.Old</a></li>
-            <li><a href="#">Customers</a></li>
-          </ul>
+                <li><a href="#">Sales</a></li>
+              </ul>
             </li>
             <li><MenuItem><img src="/assets/settings.svg"/></MenuItem>
               <ul>
                 <li><a href="#">Settings</a></li>
-                <li><a href="#">Chalkboard</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Inventroy</a></li>
-                <li><a href="#">Hours</a></li>
               </ul>
             </li>
             <li><MenuItem><img src="/assets/library-books.svg"/></MenuItem>
               <ul>
-                <li><a href="#">Flash</a></li>
-                <li><a href="#">Cash</a></li>
-                <li><a href="#">Staff</a></li>
-                <li><a href="#">Transactions</a></li>
+                <li><a href="#">Items</a></li>
               </ul>
             </li>
-          </ul>
-          
+          </ul>  
         </Drawer>
       </div>
     );

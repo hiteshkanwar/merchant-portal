@@ -13,11 +13,14 @@ for (let i = 0; i < 100; i++ ) {
 const styles = {
   margin:'0px',
   padding:'0px',
+
   block: {
     maxWidth: 250,
+
   },
   radioButton: {
     marginBottom: 16,
+    height:40,
   },
 };
 

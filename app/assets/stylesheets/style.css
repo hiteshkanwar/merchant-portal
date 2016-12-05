@@ -375,6 +375,8 @@ body{
 }
 .new-main-content{
 	width:calc(100% - 88px);
+	position: relative;
+	z-index: -1;
 }
 .search-field {
 	text-align: center;
@@ -492,7 +494,7 @@ body{
 .smallmenu li a{
 	text-decoration: none;
 	color: #d9d9d9;
-	font-size: 14px;
+	font-size: 15px;
 	
 }
 .smallmenu li:hover > ul {
@@ -503,11 +505,11 @@ body{
 	background-color: #303030;
 	color: #fff;
 	top: 0px;
-	width: 200px;
+	width: 80px;
 }
 
 .smallmenu  li:hover li { float: none; 
-	padding: 8px 0px;
+	padding: 5px 0px;
 }
 .top-margin{
 	margin-top: 36px !important;
@@ -720,7 +722,8 @@ body{
 	text-align: right !important;
 }
 .first-menu{
-	margin-top: 46px !important;
+	margin-top: 0px !important;
+
 }
 .inner-tabs table th:first-child{
 	display: none;
@@ -728,4 +731,9 @@ body{
 .link-tag{
 	text-decoration: none;
     color: #85898c !important;
+    display: block;
+}
+.link-tag:hover{
+	color: #fff !important;
+	display: block;
 }

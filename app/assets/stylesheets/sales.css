@@ -29,7 +29,18 @@ svg.donutchart {
 	overflow-y: auto;
 	border: 1px solid #ccc;
 }
+.all-day > div{
+    height: 41px !important;
+}
+.export-btn span{
+    text-transform: inherit !important ;
+    font-size: 15px !important;
 
+}
+.all-daycategory{
+    width: 12% !important;
+    float: left;
+}
 /*.date-pic div:nth-child(1) {
     position: inherit !important;
     font-size: 16px !important;

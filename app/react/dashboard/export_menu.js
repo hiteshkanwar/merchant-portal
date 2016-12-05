@@ -33,8 +33,16 @@ export default class ExportMenu extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="export-btn">
         <RaisedButton
+           style={{
+            border: '1px solid #ccc',
+            backgroundColor: '#fff',
+            lineHeight:'25px',
+            marginTop:'10px',
+            textTransform:'inherit',
+            minWidth:'75px',
+          }}
           onTouchTap={this.handleTouchTap}
           label="Export"
         />
